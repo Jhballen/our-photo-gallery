@@ -13,6 +13,12 @@ import {MatInputModule} from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
 
+//Import http service
+import { HttpClientModule } from '@angular/common/http';
+
+//Import prime gn
+import {CardModule} from 'primeng/card';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,11 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatInputModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    CardModule,
+    ButtonModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
