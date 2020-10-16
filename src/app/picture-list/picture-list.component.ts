@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Picture } from '../models/picture.model';
+import { PictureInfoService } from '../service/picture-info.service';
 
 @Component({
   selector: 'app-picture-list',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PictureListComponent implements OnInit {
 
-  constructor() { }
+
+  pictures: Array<Picture>;
+  constructor(private pictureInfoService: PictureInfoService) {
+      this.pictures= new Array <Picture> ();
+   }
 
   ngOnInit(): void {
   }
+
+  fillPictures() {
+    this.pictureInfoService.getPictures().subscribe(picture => {
+      this.pictures = picture;
+      console.log(this.pictures);
+    })
+  }
+
+
 
 }
