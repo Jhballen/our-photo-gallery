@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { PictureListComponent } from './picture-list/picture-list.component';
 import { PictureComponent } from './picture/picture.component';
 
+//Angular material imports
+import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +19,9 @@ import { PictureComponent } from './picture/picture.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
