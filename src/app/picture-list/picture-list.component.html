@@ -1,6 +1,6 @@
-<p>picture-list works!</p>
-<button (click)="fillPictures()" mat-raised-button color="primary">Primary</button>
 
-<div *ngFor= 'let picture of pictures'>
-    <app-picture [picture]="picture"></app-picture>
+<div class="general">
+    <div class="image" *ngFor= 'let picture of pictures'>
+        <app-picture  [picture]="picture"></app-picture>
+    </div>
 </div>

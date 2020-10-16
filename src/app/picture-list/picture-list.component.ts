@@ -16,6 +16,7 @@ export class PictureListComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  this.fillPictures();
   }
 
   fillPictures() {
