@@ -1,12 +1,14 @@
 
-<p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow">
-    <ng-template pTemplate="header">
-        <img alt="Card" src="https://picsum.photos/id/0/5616/3744">
-    </ng-template>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-    <ng-template pTemplate="footer">
-        <p-button label="Save" icon="pi pi-check"></p-button>
-        <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
-    </ng-template>
-</p-card>
+
+
+<div class="tarjeta">
+    <p-card header="{{picture.author}}" subheader="Download # {{picture.id}}" [style]="{width: '360px'}" styleClass="p-card-shadow">
+        <ng-template pTemplate="header">
+            <img alt="Card" src={{picture.download_url}} [style]="{'width': 'picture.width','height': 'picture.height'}">
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <p-button (click)="openUrl()" label="Download" icon="pi pi-check"></p-button>
+        
+        </ng-template>
+    </p-card>
+</div>
