@@ -13,6 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Import http service
 import { HttpClientModule } from '@angular/common/http';
 
+//Import prime gn
+import {CardModule} from 'primeng/card';
+import {ButtonModule} from 'primeng/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    CardModule,
+    ButtonModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
