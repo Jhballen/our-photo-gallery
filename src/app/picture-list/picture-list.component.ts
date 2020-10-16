@@ -23,10 +23,6 @@ export class PictureListComponent implements OnInit {
   });
   }
 
-  custom(){
-    this.paginator.pageIndex = this.pageNumber // number of the page you want to jump.
-  }
-
   pictures: Array<Picture>;
   constructor(private pictureInfoService: PictureInfoService) {
       this.pictures= new Array <Picture> ();

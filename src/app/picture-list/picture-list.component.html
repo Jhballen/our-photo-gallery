@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="general">
     <div class="cabecera">
         <h1>Our Image Gallery</h1>
@@ -16,22 +17,31 @@
         <br>
 
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="Enter page number" [(ngModel)]="pageNumber">
-        </mat-form-field>
+            <input matInput placeholder="Enter page number" [(ngModel)]="pageNumber" type="number">
+        </mat-form-field> <br>
         <button mat-stroked-button color="primary" (click)="goToPage()">Go to Page</button>
-      
-        <mat-paginator [pageSizeOptions]="[5, 10, 20]" (page)="custom()"></mat-paginator>
+
 
     </div>
 
-    <div class="banner">
-        BANNER ACA
+    <div class="grid">
+        <div class="image" *ngFor= 'let picture of pictures'>
+            <app-picture  [picture]="picture"></app-picture>
+        </div>
     </div>
+    <br>
 
+    <div class="footer">
+        <div class="Vale">
+            Valentina Calderon <br> jucalderon10@poligran.edu.co <br> Ingenieria de Sistemas
+        </div>
+        <div class="Jhon">
+            Jhon Jairo Ballen <br> jhballen@poligran.edu.co <br> Inggenieria de Sistemas
+        </div>
+        <div class="Sebastian">
+            Sebastian Barragan <br> correo <br> Ingenieria de Sistemas
+        </div>
+    </div>
 </div>
 
-<div class="general">
-    <div class="image" *ngFor= 'let picture of pictures'>
-        <app-picture  [picture]="picture"></app-picture>
-    </div>
-</div>
+
