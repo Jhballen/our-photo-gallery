@@ -12,7 +12,7 @@
 
         <mat-form-field class="example-full-width">
             <mat-label>Filter by author</mat-label>
-            <input matInput placeholder="author">
+            <input matInput placeholder="author" type="text" #myInput [(ngModel)] ="author" (input)="filtrar()">
         </mat-form-field>
         <br>
 

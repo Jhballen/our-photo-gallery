@@ -13,7 +13,7 @@ export class PictureListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   pageNumber: any;
-
+  author: String;
   goToPage() {
     this.paginator.pageIndex = this.pageNumber, // number of the page you want to jump.
       this.paginator.page.next({
@@ -40,7 +40,12 @@ export class PictureListComponent implements OnInit {
       console.log(this.pictures);
     })
   }
+  filtrar(){
+    this.pictures=this.pictures.filter(res =>{
+      return res.author.toLocaleLowerCase().match(this.author.toLocaleLowerCase());
 
+    });
+  }
 
 
 }
