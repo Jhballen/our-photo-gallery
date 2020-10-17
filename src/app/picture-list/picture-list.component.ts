@@ -41,10 +41,13 @@ export class PictureListComponent implements OnInit {
     })
   }
   filtrar(){
-    this.pictures=this.pictures.filter(res =>{
+    if (this.author != "") {
+      this.pictures=this.pictures.filter(res =>{
       return res.author.toLocaleLowerCase().match(this.author.toLocaleLowerCase());
-
     });
+    }else if (this.author ==""){
+      this.ngOnInit();
+    }
   }
 
 
