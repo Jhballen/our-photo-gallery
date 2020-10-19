@@ -12,20 +12,13 @@ export class PictureListComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  pageNumber: any;
+  pageNumber: number;
   author: String;
-  goToPage() {
-    this.paginator.pageIndex = this.pageNumber, // number of the page you want to jump.
-      this.paginator.page.next({
-        pageIndex: this.pageNumber,
-        pageSize: this.paginator.pageSize,
-        length: this.paginator.length
-  });
-  }
-
+  sizePictures: number;
   pictures: Array<Picture>;
   constructor(private pictureInfoService: PictureInfoService) {
       this.pictures= new Array <Picture> ();
+      this.sizePictures = 10;
    }
 
 

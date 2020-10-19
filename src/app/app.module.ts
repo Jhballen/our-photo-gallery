@@ -20,6 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 
+//Import Paginator
+import {NgxPaginationModule} from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +39,8 @@ import {ButtonModule} from 'primeng/button';
     FormsModule,
     HttpClientModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    NgxPaginationModule
     
   ],
   providers: [],
