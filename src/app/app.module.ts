@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
 
 //Import http service
 import { HttpClientModule } from '@angular/common/http';
@@ -37,6 +38,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     MatInputModule,
     MatPaginatorModule,
     FormsModule,
+    MatIconModule,
     HttpClientModule,
     CardModule,
     ButtonModule,
