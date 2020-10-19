@@ -1,3 +1,10 @@
+<!-- Muestra la imagen individual
+    -parameter picture.author: autor de la imagen
+    -parameter picture.id: id de la imagen
+    -parameter picture.download_url: url de la imagen
+    -button: abre la imagen en una pestaña
+
+    return: vista de imagen con parametros-->
 <div class="tarjeta">
     <p-card header="{{picture.author}}" subheader="Download # {{picture.id}}" [style]="{width: '360px'}" styleClass="p-card-shadow">
         <ng-template pTemplate="header">

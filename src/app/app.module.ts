@@ -30,6 +30,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     PictureListComponent,
     PictureComponent
   ],
+  /** Importacion de modulos de Angular   */
   imports: [
     BrowserModule,
     AppRoutingModule,

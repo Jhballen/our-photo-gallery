@@ -7,10 +7,10 @@ import { Picture } from '../models/picture.model';
 @Injectable({
   providedIn: 'root'
 })
+/** Funcion para vista de imagenes desde el api */
 export class PictureInfoService {
 
   constructor(private http: HttpClient) { }
-
 
   getPictures (): Observable<Picture []> {
 

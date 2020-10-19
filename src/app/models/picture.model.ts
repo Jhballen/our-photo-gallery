@@ -1,3 +1,4 @@
+/** Estructura JSON de una imagen */
 export class Picture {
 
     id: number;
